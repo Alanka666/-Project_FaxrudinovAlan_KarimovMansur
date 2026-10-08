@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms - WebStart Lessons</title>
+
+  <!-- Same three-file CSS setup as every other page in /lessons/. -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/lessons.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+  <!-- ===============================================================
+       HEADER (identical on every lesson page)
+       =============================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <img src="../images/html-logo.svg" alt="WebStart logo">
+        <span>WebStart</span>
+      </a>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="index.html" class="active">Lessons</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" type="button" aria-label="Toggle theme">🌙</button>
+        <a href="index.html" class="btn-primary">All Lessons</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===============================================================
+       LESSON LAYOUT: left nav sidebar (links to all 10 lessons) +
+       the lesson's own content on the right, inside an <article>
+       because this content is a self-contained piece of writing.
+       =============================================================== -->
+  <section class="section" style="padding-top:30px;">
+    <div class="container">
+      <div class="lesson-page">
+
+        <!-- Sidebar: every lesson, in order. The current page's own
+             link gets class="active" so the learner can see where
+             they are in the course. -->
+        <nav class="lesson-nav" aria-label="Lesson list">
+          <h3>All Lessons</h3>
+          <ol>
+            <li><a href="basics.html">HTML Basics</a></li>
+            <li><a href="structure.html">Document Structure</a></li>
+            <li><a href="text.html">Working with Text</a></li>
+            <li><a href="links.html">Links</a></li>
+            <li><a href="images.html">Images</a></li>
+            <li><a href="lists.html">Lists</a></li>
+            <li><a href="tables.html">Tables</a></li>
+            <li><a href="forms.html" class="active">Forms</a></li>
+            <li><a href="semantic.html">Semantic HTML</a></li>
+            <li><a href="media.html">Audio &amp; Video</a></li>
+          </ol>
+        </nav>
+
+        <!-- The lesson content itself. -->
+        <article class="lesson-content">
+          <span class="lesson-kicker">LESSON 8</span>
+          <h1>Forms</h1>
+          <p class="lesson-intro">Forms collect input from visitors - names, messages, choices - and are built from the <form> tag plus a set of input controls inside it.</p>
+
+        <h2>The form tag</h2>
+        <p>
+          <code>&lt;form&gt;</code> wraps every control that belongs to the
+          same submission, such as a contact form or a search box.
+        </p>
+
+        <h2>Text input and labels</h2>
+        <p>
+          <code>&lt;input&gt;</code> creates a form control; its
+          <code>type</code> attribute decides what kind of control it is.
+          Always pair an input with a <code>&lt;label&gt;</code> so
+          visitors (and screen readers) know what it's for.
+        </p>
+
+        <div class="example">
+          <div class="example__label">Example</div>
+          <pre><span class="tag">&lt;form&gt;</span>
+<span class="indent-1"><span class="tag">&lt;label</span> <span class="attr">for=</span><span class="string">"name"</span><span class="tag">&gt;</span>Your name<span class="tag">&lt;/label&gt;</span></span>
+<span class="indent-1"><span class="tag">&lt;input</span> <span class="attr">type=</span><span class="string">"text"</span> <span class="attr">id=</span><span class="string">"name"</span> <span class="attr">name=</span><span class="string">"name"</span><span class="tag">&gt;</span></span>
+
+<span class="indent-1"><span class="tag">&lt;label</span> <span class="attr">for=</span><span class="string">"email"</span><span class="tag">&gt;</span>Email<span class="tag">&lt;/label&gt;</span></span>
+<span class="indent-1"><span class="tag">&lt;input</span> <span class="attr">type=</span><span class="string">"email"</span> <span class="attr">id=</span><span class="string">"email"</span> <span class="attr">name=</span><span class="string">"email"</span><span class="tag">&gt;</span></span>
+
+<span class="indent-1"><span class="tag">&lt;button</span> <span class="attr">type=</span><span class="string">"submit"</span><span class="tag">&gt;</span>Send<span class="tag">&lt;/button&gt;</span></span>
+<span class="tag">&lt;/form&gt;</span></pre>
+        </div>
+
+        <h2>Other common controls</h2>
+        <ul>
+          <li><code>&lt;textarea&gt;</code> - a multi-line text box</li>
+          <li><code>&lt;select&gt;</code> with <code>&lt;option&gt;</code> - a dropdown menu</li>
+          <li><code>&lt;input type="checkbox"&gt;</code> - a yes/no toggle</li>
+          <li><code>&lt;input type="radio"&gt;</code> - one choice from a group</li>
+        </ul>
+
+        <div class="callout">
+          <span class="callout__icon">⚠️</span>
+          <p>The <code>for</code> attribute on a label must match the
+          <code>id</code> of its input exactly, or clicking the label
+          won't focus the field.</p>
+        </div>
+        
+          <!-- Previous / Next navigation between lessons -->
+          <div class="lesson-pager">
+            <a href="tables.html" class="btn-secondary">← Tables</a>
+            <a href="semantic.html" class="btn-primary">Semantic HTML →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===============================================================
+       FOOTER
+       =============================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <img src="../images/html-logo.svg" alt="WebStart logo">
+        <span>WebStart</span>
+      </a>
+      <p>&copy; 2026 WebStart. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

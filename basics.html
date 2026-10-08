@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Basics - WebStart Lessons</title>
+
+  <!-- Same three-file CSS setup as every other page in /lessons/. -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/lessons.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+  <!-- ===============================================================
+       HEADER (identical on every lesson page)
+       =============================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <img src="../images/html-logo.svg" alt="WebStart logo">
+        <span>WebStart</span>
+      </a>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="index.html" class="active">Lessons</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" type="button" aria-label="Toggle theme">🌙</button>
+        <a href="index.html" class="btn-primary">All Lessons</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===============================================================
+       LESSON LAYOUT: left nav sidebar (links to all 10 lessons) +
+       the lesson's own content on the right, inside an <article>
+       because this content is a self-contained piece of writing.
+       =============================================================== -->
+  <section class="section" style="padding-top:30px;">
+    <div class="container">
+      <div class="lesson-page">
+
+        <!-- Sidebar: every lesson, in order. The current page's own
+             link gets class="active" so the learner can see where
+             they are in the course. -->
+        <nav class="lesson-nav" aria-label="Lesson list">
+          <h3>All Lessons</h3>
+          <ol>
+            <li><a href="basics.html" class="active">HTML Basics</a></li>
+            <li><a href="structure.html">Document Structure</a></li>
+            <li><a href="text.html">Working with Text</a></li>
+            <li><a href="links.html">Links</a></li>
+            <li><a href="images.html">Images</a></li>
+            <li><a href="lists.html">Lists</a></li>
+            <li><a href="tables.html">Tables</a></li>
+            <li><a href="forms.html">Forms</a></li>
+            <li><a href="semantic.html">Semantic HTML</a></li>
+            <li><a href="media.html">Audio &amp; Video</a></li>
+          </ol>
+        </nav>
+
+        <!-- The lesson content itself. -->
+        <article class="lesson-content">
+          <span class="lesson-kicker">LESSON 1</span>
+          <h1>HTML Basics</h1>
+          <p class="lesson-intro">HTML (HyperText Markup Language) is the language used to build the structure of every web page. It is not a programming language - it is a markup language, meaning it describes the content of a page using tags.</p>
+
+        <h2>What is a tag?</h2>
+        <p>
+          A tag is a piece of markup wrapped in angle brackets, like
+          <code>&lt;p&gt;</code>. Most tags come in pairs: an opening tag
+          and a matching closing tag (written with a forward slash), with
+          the actual content placed between them.
+        </p>
+
+        <div class="example">
+          <div class="example__label">Example</div>
+          <pre><span class="tag">&lt;p&gt;</span>This text is a paragraph.<span class="tag">&lt;/p&gt;</span></pre>
+        </div>
+
+        <h2>Your first HTML document</h2>
+        <p>
+          Every HTML page shares the same minimal skeleton: a
+          <code>&lt;!DOCTYPE html&gt;</code> declaration, an
+          <code>&lt;html&gt;</code> element, and inside it a
+          <code>&lt;head&gt;</code> and a <code>&lt;body&gt;</code>.
+        </p>
+
+        <div class="example">
+          <div class="example__label">index.html</div>
+          <pre><span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang=</span><span class="string">"en"</span><span class="tag">&gt;</span>
+<span class="indent-1"><span class="tag">&lt;head&gt;</span></span>
+<span class="indent-1"><span class="tag">&lt;title&gt;</span>My Website<span class="tag">&lt;/title&gt;</span></span>
+<span class="indent-1"><span class="tag">&lt;/head&gt;</span></span>
+<span class="indent-1"><span class="tag">&lt;body&gt;</span></span>
+<span class="indent-1"><span class="tag">&lt;h1&gt;</span>Hello, world!<span class="tag">&lt;/h1&gt;</span></span>
+<span class="indent-1"><span class="tag">&lt;/body&gt;</span></span>
+<span class="tag">&lt;/html&gt;</span></pre>
+        </div>
+
+        <div class="callout">
+          <span class="callout__icon">💡</span>
+          <p>Tag names are case-insensitive, but the convention is to
+          always write them in lowercase.</p>
+        </div>
+
+        <h2>Elements vs. attributes</h2>
+        <p>
+          An <strong>element</strong> is a tag plus its content.
+          An <strong>attribute</strong> gives extra information about an
+          element and is written inside the opening tag, as a
+          <code>name="value"</code> pair - for example, <code>lang="en"</code>
+          above tells the browser the page's language.
+        </p>
+        
+          <!-- Previous / Next navigation between lessons -->
+          <div class="lesson-pager">
+            <span class="lesson-pager__spacer"></span>
+            <a href="structure.html" class="btn-primary">Document Structure →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===============================================================
+       FOOTER
+       =============================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <img src="../images/html-logo.svg" alt="WebStart logo">
+        <span>WebStart</span>
+      </a>
+      <p>&copy; 2026 WebStart. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

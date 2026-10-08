@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lessons - WebStart</title>
+
+  <!-- This page lives one folder deeper than index.html (inside
+       /lessons/), so every path that points back to a shared file
+       starts with "../" to step up one level first. -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/lessons.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+  <!-- ===================================================================
+       HEADER (same structure as index.html, but links use "../" to
+       reach the root, and "Lessons" is the active nav item)
+       =================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <img src="../images/html-logo.svg" alt="WebStart logo">
+        <span>WebStart</span>
+      </a>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="index.html" class="active">Lessons</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" type="button" aria-label="Toggle theme">🌙</button>
+        <a href="basics.html" class="btn-primary">Start Learning</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================================
+       PAGE TITLE
+       =================================================================== -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Course <span class="gradient-text">Lessons</span></h1>
+      <p>Work through each lesson in order to master HTML step by step.</p>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SIDEBAR (progress) + LESSON LIST, side by side via CSS grid
+       =================================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="lessons-layout">
+
+        <aside class="sidebar-card">
+          <h3>Your Progress</h3>
+          <div class="progress-track">
+            <div class="progress-fill"></div>
+          </div>
+          <p class="progress-label">2 of 10 lessons completed (20%)</p>
+        </aside>
+
+        <!-- Every row links to its own page inside /lessons/. Clicking
+             a lesson's title opens its dedicated HTML file. -->
+        <div class="lesson-list">
+
+          <a href="basics.html" class="lesson-item done">
+            <div class="lesson-number">✓</div>
+            <div class="lesson-info">
+              <h4>1. HTML Basics</h4>
+              <p>What HTML is, how it works, and how to structure your page.</p>
+            </div>
+            <span class="lesson-tag done">Completed</span>
+          </a>
+
+          <a href="structure.html" class="lesson-item done">
+            <div class="lesson-number">✓</div>
+            <div class="lesson-info">
+              <h4>2. Document Structure</h4>
+              <p>The head, the body, and the basic skeleton of every page.</p>
+            </div>
+            <span class="lesson-tag done">Completed</span>
+          </a>
+
+          <a href="text.html" class="lesson-item">
+            <div class="lesson-number">3</div>
+            <div class="lesson-info">
+              <h4>3. Working with Text</h4>
+              <p>Headings, paragraphs, bold/italic text and line breaks.</p>
+            </div>
+            <span class="lesson-tag current">In Progress</span>
+          </a>
+
+          <a href="links.html" class="lesson-item">
+            <div class="lesson-number">4</div>
+            <div class="lesson-info">
+              <h4>4. Links</h4>
+              <p>Connect pages together with the anchor tag and href.</p>
+            </div>
+            <span class="lesson-tag locked">Locked</span>
+          </a>
+
+          <a href="images.html" class="lesson-item">
+            <div class="lesson-number">5</div>
+            <div class="lesson-info">
+              <h4>5. Images</h4>
+              <p>Add pictures to a page and describe them for accessibility.</p>
+            </div>
+            <span class="lesson-tag locked">Locked</span>
+          </a>
+
+          <a href="lists.html" class="lesson-item">
+            <div class="lesson-number">6</div>
+            <div class="lesson-info">
+              <h4>6. Lists</h4>
+              <p>Group related items with ordered, unordered and description lists.</p>
+            </div>
+            <span class="lesson-tag locked">Locked</span>
+          </a>
+
+          <a href="tables.html" class="lesson-item">
+            <div class="lesson-number">7</div>
+            <div class="lesson-info">
+              <h4>7. Tables</h4>
+              <p>Display tabular data with rows, columns and headers.</p>
+            </div>
+            <span class="lesson-tag locked">Locked</span>
+          </a>
+
+          <a href="forms.html" class="lesson-item">
+            <div class="lesson-number">8</div>
+            <div class="lesson-info">
+              <h4>8. Forms</h4>
+              <p>Collect input from visitors with text fields, buttons and more.</p>
+            </div>
+            <span class="lesson-tag locked">Locked</span>
+          </a>
+
+          <a href="semantic.html" class="lesson-item">
+            <div class="lesson-number">9</div>
+            <div class="lesson-info">
+              <h4>9. Semantic HTML</h4>
+              <p>Write meaningful markup with header, nav, main and footer.</p>
+            </div>
+            <span class="lesson-tag locked">Locked</span>
+          </a>
+
+          <a href="media.html" class="lesson-item">
+            <div class="lesson-number">10</div>
+            <div class="lesson-info">
+              <h4>10. Audio &amp; Video</h4>
+              <p>Embed audio, video and external content in your page.</p>
+            </div>
+            <span class="lesson-tag locked">Locked</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       FOOTER
+       =================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <img src="../images/html-logo.svg" alt="WebStart logo">
+        <span>WebStart</span>
+      </a>
+      <p>&copy; 2026 WebStart. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
