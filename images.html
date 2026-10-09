@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Images - WebStart Lessons</title>
+
+  <!-- Same three-file CSS setup as every other page in /lessons/. -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/lessons.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+  <!-- ===============================================================
+       HEADER (identical on every lesson page)
+       =============================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <img src="../images/html-logo.svg" alt="WebStart logo">
+        <span>WebStart</span>
+      </a>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="index.html" class="active">Lessons</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" type="button" aria-label="Toggle theme">🌙</button>
+        <a href="index.html" class="btn-primary">All Lessons</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===============================================================
+       LESSON LAYOUT: left nav sidebar (links to all 10 lessons) +
+       the lesson's own content on the right, inside an <article>
+       because this content is a self-contained piece of writing.
+       =============================================================== -->
+  <section class="section" style="padding-top:30px;">
+    <div class="container">
+      <div class="lesson-page">
+
+        <!-- Sidebar: every lesson, in order. The current page's own
+             link gets class="active" so the learner can see where
+             they are in the course. -->
+        <nav class="lesson-nav" aria-label="Lesson list">
+          <h3>All Lessons</h3>
+          <ol>
+            <li><a href="basics.html">HTML Basics</a></li>
+            <li><a href="structure.html">Document Structure</a></li>
+            <li><a href="text.html">Working with Text</a></li>
+            <li><a href="links.html">Links</a></li>
+            <li><a href="images.html" class="active">Images</a></li>
+            <li><a href="lists.html">Lists</a></li>
+            <li><a href="tables.html">Tables</a></li>
+            <li><a href="forms.html">Forms</a></li>
+            <li><a href="semantic.html">Semantic HTML</a></li>
+            <li><a href="media.html">Audio &amp; Video</a></li>
+            <li><a href="quiz.html">Final Quiz</a></li>
+          </ol>
+        </nav>
+
+        <!-- The lesson content itself. -->
+        <article class="lesson-content">
+          <span class="lesson-kicker">LESSON 5</span>
+          <h1>Images</h1>
+          <p class="lesson-intro">The <code>&lt;img&gt;</code> tag embeds a picture into a page. Unlike most tags, it is self-closing - the image comes from a file, so there is no inner content to wrap.</p>
+
+        <h2>Adding an image</h2>
+        <p>
+          The <code>src</code> attribute points to the image file, and the
+          <code>alt</code> attribute provides a text description.
+        </p>
+
+        <div class="example">
+          <div class="example__label">Example</div>
+          <pre><span class="tag">&lt;img</span> <span class="attr">src=</span><span class="string">"images/html-logo.svg"</span> <span class="attr">alt=</span><span class="string">"WebStart logo"</span><span class="tag">&gt;</span></pre>
+        </div>
+
+        <div class="callout">
+          <span class="callout__icon">⚠️</span>
+          <p>Never skip <code>alt</code>. Screen readers read it aloud for
+          visually impaired visitors, and browsers show it if the image
+          fails to load.</p>
+        </div>
+
+        <h2>Controlling image size</h2>
+        <p>
+          The <code>width</code> and <code>height</code> attributes (in
+          pixels) reserve space for the image before it finishes loading,
+          which prevents the page from jumping around.
+        </p>
+
+        <div class="example">
+          <div class="example__label">Example</div>
+          <pre><span class="tag">&lt;img</span> <span class="attr">src=</span><span class="string">"photo.jpg"</span> <span class="attr">alt=</span><span class="string">"Sunset over the hills"</span> <span class="attr">width=</span><span class="string">"600"</span> <span class="attr">height=</span><span class="string">"400"</span><span class="tag">&gt;</span></pre>
+        </div>
+
+        <h2>Images with a caption</h2>
+        <p>
+          <code>&lt;figure&gt;</code> groups an image with a
+          <code>&lt;figcaption&gt;</code> that describes it.
+        </p>
+
+        <div class="example">
+          <div class="example__label">Example</div>
+          <pre><span class="tag">&lt;figure&gt;</span>
+<span class="indent-1"><span class="tag">&lt;img</span> <span class="attr">src=</span><span class="string">"photo.jpg"</span> <span class="attr">alt=</span><span class="string">"Sunset over the hills"</span><span class="tag">&gt;</span></span>
+<span class="indent-1"><span class="tag">&lt;figcaption&gt;</span>A sunset over the hills<span class="tag">&lt;/figcaption&gt;</span></span>
+<span class="tag">&lt;/figure&gt;</span></pre>
+        </div>
+        
+          <!-- ===========================================================
+               QUICK QUIZ at the end of the lesson (HTML + CSS only).
+               Each answer is a hidden radio <input> followed by a visible
+               <label>. CSS colors the chosen label green (correct) or
+               red (wrong) with the :checked selector and reveals the
+               explanation. The score is counted by a CSS counter.
+               =========================================================== -->
+          <h2>Quick Quiz</h2>
+          <p>Check what you just learned - pick an answer for each question.</p>
+
+          <form class="quiz quiz--mini">
+
+            <!-- Question 1: one <fieldset> = one question card -->
+            <fieldset class="quiz-question">
+              <legend>1. Which tag embeds an image in a page?</legend>
+              <input type="radio" name="q1" id="q1a">
+              <label for="q1a" class="correct"><code>&lt;img&gt;</code></label>
+              <input type="radio" name="q1" id="q1b">
+              <label for="q1b"><code>&lt;image&gt;</code></label>
+              <input type="radio" name="q1" id="q1c">
+              <label for="q1c"><code>&lt;src&gt;</code></label>
+              <input type="radio" name="q1" id="q1d">
+              <label for="q1d"><code>&lt;photo&gt;</code></label>
+              <p class="quiz-explain"><code>&lt;img&gt;</code> is the image tag. It is self-closing and uses <code>src</code> for the file and <code>alt</code> for the description.</p>
+            </fieldset>
+
+            <!-- Question 2: one <fieldset> = one question card -->
+            <fieldset class="quiz-question">
+              <legend>2. Which tag groups an image together with a caption?</legend>
+              <input type="radio" name="q2" id="q2a">
+              <label for="q2a"><code>&lt;caption&gt;</code></label>
+              <input type="radio" name="q2" id="q2b">
+              <label for="q2b"><code>&lt;frame&gt;</code></label>
+              <input type="radio" name="q2" id="q2c">
+              <label for="q2c" class="correct"><code>&lt;figure&gt;</code></label>
+              <input type="radio" name="q2" id="q2d">
+              <label for="q2d"><code>&lt;label&gt;</code></label>
+              <p class="quiz-explain"><code>&lt;figure&gt;</code> wraps the image, and <code>&lt;figcaption&gt;</code> inside it holds the caption text.</p>
+            </fieldset>
+
+            <!-- Score box: the number is generated by CSS (counter) -->
+            <div class="quiz-result">
+              <p class="quiz-result__label">Your score</p>
+              <p class="quiz-result__score gradient-text"></p>
+              <div class="quiz-actions">
+                <!-- type="reset" clears all answers - no JavaScript needed -->
+                <button type="reset" class="btn-secondary">↺ Try again</button>
+              </div>
+            </div>
+          </form>
+
+          <!-- Previous / Next navigation between lessons -->
+          <div class="lesson-pager">
+            <a href="links.html" class="btn-secondary">← Links</a>
+            <a href="lists.html" class="btn-primary">Lists →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===============================================================
+       FOOTER
+       =============================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <img src="../images/html-logo.svg" alt="WebStart logo">
+        <span>WebStart</span>
+      </a>
+      <p>&copy; 2026 WebStart. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

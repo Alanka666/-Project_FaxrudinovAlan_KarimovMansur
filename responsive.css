@@ -1,0 +1,84 @@
+/* =====================================================================
+   css/responsive.css
+   Every @media rule for the whole site lives here, loaded LAST on every
+   page (after style.css + home.css/lessons.css) so these rules are able
+   to override the desktop-first styles above them when the screen gets
+   narrower.
+   ===================================================================== */
+
+/* ---------------------------------------------------------------------
+   TABLET SIZES (900px and narrower)
+   --------------------------------------------------------------------- */
+@media (max-width: 900px) {
+
+  /* Homepage */
+  .hero .container {
+    grid-template-columns: 1fr; /* stack hero text above the code card */
+  }
+  .topics-grid {
+    grid-template-columns: repeat(2, 1fr); /* 4 columns -> 2 */
+  }
+  .path-panel {
+    grid-template-columns: 1fr; /* stack intro text above the steps */
+  }
+  .steps {
+    flex-wrap: wrap;
+  }
+
+  /* Lessons overview page */
+  .lessons-layout {
+    grid-template-columns: 1fr; /* sidebar moves above the lesson list */
+  }
+  .sidebar-card {
+    position: static;
+  }
+
+  /* Individual lesson pages */
+  .lesson-page {
+    grid-template-columns: 1fr; /* nav sidebar moves above the content */
+  }
+  .lesson-nav {
+    position: static;
+  }
+  .lesson-content {
+    padding: 30px;
+  }
+}
+
+/* ---------------------------------------------------------------------
+   MOBILE SIZES (600px and narrower)
+   --------------------------------------------------------------------- */
+@media (max-width: 600px) {
+
+  /* Header: hide the text nav links to save space (the logo and the
+     "Start Learning" button stay visible) */
+  .main-nav {
+    display: none;
+  }
+
+  /* Homepage */
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .topics-grid {
+    grid-template-columns: 1fr; /* single column on phones */
+  }
+  .cta-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Lesson pages */
+  .lesson-content {
+    padding: 22px;
+  }
+  .lesson-pager {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Quiz page */
+  .quiz-question {
+    padding: 20px;
+  }
+}
